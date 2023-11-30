@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+header{
+    position: fixed;
+    padding: 0 var(--default-padding) 0 var(--default-padding);
+    z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
+    height: 18vh;
+}
+.header-nav{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 18vh;
+    justify-content: space-between;
+}
+.header.toggled{
+    background-color: var(--header-bg-color);
+}
+.header.toggled .header-nav .header-menu li{
+    color: var(--text-default);
+}
+.header-menu{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.header-menu li{
+    list-style: none;
+    color: var(--text-secondary);
+    font-family: var(--default-font-family);
+}
+.logo img{
+    margin-top: -10%;
+    height: 130%;
+}
+section{
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.content-wrapper{
+    gap: var(--default-padding);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding:var(--default-padding);
+}
+.content-wrapper.column{
+    flex-direction: column;
+}
+.section-2{
+    height: 100vh;
+}
+.section-longer{
+    height: 200vh;
+}
+.background-video {
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-video video, .background-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -999; /* Mantenha o z-index negativo para posicionar o vídeo atrás do conteúdo */
+}
+
+.background-video-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    padding: var(--default-padding);
+    z-index: 1; /* Aumente o z-index para que o overlay fique acima do vídeo */
+}
+
+.background-video-overlay.centered{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.background-video-overlay h1,
+.background-video-overlay h2,
+.background-video-overlay h3,
+.video-button {
+    color: var(--text-secondary);
+    font-family: var(--default-font-family);
+}
+
+.background-video-overlay h1 {
+    font-size: var(--titles);
+}
+
+.background-video-overlay h2 {
+    font-size: var(--subtitles)
+}
+
+.background-video-overlay h3 {
+    font-size: var(--text);
+    font-weight: 300;
+    width: 65%;
+    margin-top: 10px;
+}
+
+.video-button {
+    background-color: var(--btn-color);
+    width: fit-content;
+    padding: 10px 30px;
+    font-weight: 300;
+    margin-top: 20px;
+    z-index: 2; /* Aumente o z-index para que o botão fique acima do vídeo */
+}
+
+.video-button:hover {
+    cursor: pointer;
+    background-color: var(--btn-hover-color);
+}
+
+.background-pattern{
+    width: 100%;
+    height: 100vh;
+    opacity: 0.15;
+    background-image: url(./assets/bg_pattern.png);
+}
+
+.floating-video{
+    width: 55%;
+}
+.floating-video video{
+    width: 100%;
+}
+
+.floating-video-content{
+    right: 0;
+    width: calc(50% - var(--default-padding));
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.background-video-overlay.centered .page-title{
+    width: 60%;
+    text-align: center;
+}
+.background-video-overlay.centered .page-subtitle{
+    width: 60%;
+    text-align: center;
+}
+.section-title{
+    font-size: 40px;
+    font-family: var(--default-font-family);
+    color: var(--text-ternary);
+}
+.section-text{
+    font-size: 16px;
+    margin-top: 16px;
+    font-family: var(--default-font-family);
+    color: var(--text-quaternary);
+    font-weight: 400;
+}
+.section-list{
+    margin-top: 16px;
+}
+.list-items {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.list-items span{
+    display: block;
+    font-size: 18px;
+    font-family: var(--default-font-family);
+    color: var(--btn-color);
+    font-weight: 400;
+}
+
+.section-subtititle-detail{
+    font-size: 24px;
+    font-family: var(--default-font-family);
+    color: var(--btn-color);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.section-title.cards{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.content-wrapper.cards {
+    display: flex;
+    padding: var(--default-padding) !important;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+.cards-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.cards-wrapper .card{
+    width: 24%;
+    display: flex;
+    height: 156px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    border: 4px solid var(--text-quaternary);
+    transition: color 0.3s ease-in-out
+}
+.card:hover{
+    border: 4px solid var(--btn-color)
+}
+.card-text{
+    text-align: center;
+    width: 128px;
+    font-family: var(--default-font-family);    
+    color: var(--text-quaternary);
+}
+
+.video-wrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 128px;
+    gap: var(--default-padding)
+}
+.product-wrapper{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 40%;
+    justify-content: space-between;
+
+}
+
+.products{
+    width: 22%;
+    height: 256px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.products img{
+    width: 100%;
+}
+.special-products-container{
+    justify-content: center;
+    gap: 32px;
+}
+.special-products{
+    display: flex;
+    width: 60%;
+    position: relative;
+}
+.special-product{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.special-product .section-subtititle-detail{
+    font-size: 33px;
+}
+
+.special-product img{
+    height: 200px;
+    width: auto;
+}
+.form-overlay{
+    padding: 0 var(--default-padding) 0 0 ; 
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+}
+
+::-webkit-scrollbar{
+    width:5px
+}
+::-webkit-scrollbar-track{
+    background:var(--default-bg);
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb{
+    background:var(--btn-color);
+    border-radius:5px
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--btn-color-hover);
+    
+}
+
+/* Para Firefox */
+/* Largura da barra de rolagem */
+* {
+    scrollbar-width: thin; /* Tamanho da barra de rolagem */
+    scrollbar-color: var(--btn-color) var(--default-bg); /* Cor da barra e fundo */
+}
+
+/* Estilizando a "track" da barra de rolagem */
+*::-webkit-scrollbar-track {
+    background: var(--default-bg); /* Cor de fundo */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+/* Estilizando o "pulso" da barra de rolagem */
+*::-webkit-scrollbar-thumb {
+    background: var(--btn-color); /* Cor do "pulso" */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+/* Mudar a cor ao passar o mouse sobre a barra */
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--btn-color-hover); /* Nova cor ao passar o mouse */
+}
+
+
+:root{
+    --default-padding: 5%;
+    --text-secondary: #fff;
+    --text-default: #000;
+    --text-ternary: #3a3a3a;
+    --text-quaternary: #6a6a6a;
+    --header-bg-color: #fcfcfc;
+    --default-font-family: Montserrat;
+    --titles: 55px;
+    --subtitles: 36px;
+    --text: 18px;
+    --btn-color: green;
+    --btn-hover-color: black;
+}
