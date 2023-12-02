@@ -22,7 +22,13 @@
                     <li>Drones de Mapeamento</li>
                     <li>Contato</li>
                 </ul>
+                <div class="sandwitch-menu">
+                    <div class="lines" id="line1"></div>
+                    <div class="lines" id="line2"></div>
+                    <div class="lines" id="line3"></div>
+                </div>
             </div><!--End Menu Div-->
+            
         </div><!--End Nav Header Div-->
     </header>
     <main>
@@ -256,33 +262,100 @@
             <section>
                 <div class="background-video">
                     <div class="background-video">
-                        <div class="background-video-overlay">
-                            <h1 class="page-title">
-                                Envie-nos um e-mail     
-                            </h1>
-                            <h3 class="page-subtitle">
-                                Envie sua mensagem ou pergunta. Responderemos o mais breve possível.
-                            </h2>
+                        <div class="background-video-overlay form">
+                            <div class="form-title-and-subtitle">
+                                <h1 class="page-title">
+                                    Envie-nos um e-mail     
+                                </h1>
+                                <h3 class="page-subtitle">
+                                    Envie sua mensagem ou pergunta. Responderemos o mais breve possível.
+                                </h2>
+                            </div>
+                            
+                            <div class="form-overlay">
+                                <input type="name" placeholder="Nome"></input>
+                                <input type="email" placeholder="E-mail"></input>
+                                <select id="assunto" name="Assunto">
+                                    <option value="assunto">-- Assunto --</option>
+                                    <option value="Assistência Técnica">Assistência Técnica</option>
+                                    <option value="Venda">Venda</option>
+                                    <option value="Atendimento">Atendimento</option>
+                                </select>
+                                <textarea type="text" placeholder="Mensagem"></textarea>
+                                <input type="submit" value="Enviar"></input>
+                            </div>
                         </div><!--End Background Video 1 Overlay Div-->
-                        <div class="form-overlay">
-                            <input type="text" placeholder="Nome"></input>
-                            <input type="email" placeholder="E-mail"></input>
-                            <select id="assunto" name="Assunto">
-                                <option value="assunto">-- Assunto --</option>
-                                <option value="saab">Assistência Técnica</option>
-                                <option value="fiat">Venda</option>
-                                <option value="audi">Atendimento</option>
-                            </select>
-                            <input type="text" placeholder="Mensagem"></input>
-                            <input type="submit" value="Enviar"></input>
-                        </div>
+                        
                     <img src="./assets/form-bkg.jpg" alt="">
                 </div><!--End Background Video 1 Div-->
             </section>
         </article>
     </main>
     <footer>
-
+        <div class="footer">
+            <section>
+                <div class="content-wrapper">
+                    <div class="footer-wrapper">
+                        <div class="about">
+                            <h3>GR Drones</h3>
+                            <div class="phone-container">
+                                <div class="phone-icon">
+                                    <i class="bi bi-headset"></i>
+                                </div>
+                                <div class="phone-info">
+                                    <span class="section-text">Dúvidas?</span>
+                                    <span class="section-text">(99) 99999-9999</span>
+                                </div>
+                            </div>
+                            <div class="section-adress">
+                                <span class="section-text">Av. Lorem Ipsum Sit Dolor Amet Paribus, Lorem Ipsum, Ipsum - GO - 99999-999 </span>
+                            </div>
+                            <div class="social-media">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <h3>Menu</h3>
+                            <div class="footer-menu-wrapper">
+                                <ul class="section-text">
+                                    <li>Sobre Nós</li>
+                                    <li>Treinamentos</li>
+                                    <li>Drones</li>
+                                    <li>Política de Privacidade</li>
+                                    <li>Contato</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-drones">
+                            <h3>Drones</h3>
+                            <div class="footer-menu-wrapper">
+                                <ul class="section-text">
+                                    <li>Agras T10</li>
+                                    <li>Agras T20P</li>
+                                    <li>Agras T30</li>
+                                    <li>Agras T40</li>
+                                    <li>P4 Multispectral</li>
+                                    <li>Phantom 4 RTX</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-newsletter">
+                            <h3>Newsletter</h3>
+                            <span class="section-text">Receba nossas últimas notícias e atualizações
+                            </span>
+                            <span class="input-email-wrapper">
+                                <input type="email" placeholder="E-mail"></input>
+                                <input type="submit" value="Inscreva-se"></div>
+                            </span>          
+                        </div>
+                    </div>
+                    <div class="footer-lower">
+        
+                    </div>
+                </div>
+            </div>
+            </section>
     </footer>
 </body>
 </html>

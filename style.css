@@ -7,6 +7,7 @@
 
 header{
     position: fixed;
+    transform: translateY(-1px);
     padding: 0 var(--default-padding) 0 var(--default-padding);
     z-index: 999;
     width: 100%;
@@ -36,6 +37,21 @@ header{
     list-style: none;
     color: var(--text-secondary);
     font-family: var(--default-font-family);
+}
+.sandwitch-menu{
+    width: 48px;
+    height: 48px;
+    display: none;
+}
+.sandwitch-menu div{
+    width: 48px;
+    height: 5px;
+    margin-top: 9px;
+    border-radius: 8px;
+    background-color:var(--text-secondary);
+}
+.sandwitch-menu .lines.toggled{
+    background-color: var(--text-default);
 }
 .logo img{
     margin-top: -10%;
@@ -276,8 +292,9 @@ section{
 }
 .special-products{
     display: flex;
-    width: 60%;
+    gap: 16px;
     position: relative;
+    align-items: center;
 }
 .special-product{
    display: flex;
@@ -289,8 +306,22 @@ section{
 }
 
 .special-product img{
-    height: 200px;
+    height: 30vh;
     width: auto;
+}
+.background-video-overlay.form{
+    padding: 0 var(--default-padding) 0 var(--default-padding);
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+.form-title-and-subtitle{
+    width: 50%;
+}
+.form-title-and-subtitle .page-subtitle{
+    width: 100%;
 }
 .form-overlay{
     padding: 0 var(--default-padding) 0 0 ; 
@@ -298,8 +329,119 @@ section{
     flex-direction: column;
     position: absolute;
     right: 0;
+    width: 30%;
+    gap: 16px;
+}
+.form-overlay input, .form-overlay select{
+    height: 32px;
+    padding: 0 8px;
+    outline: 0;
+    font-family: var(--default-font-family);
 }
 
+.form-overlay textarea{
+    height: 96px;
+    padding: 8px 8px;
+    outline: 0;
+    font-family: var(--default-font-family);
+    resize: none; 
+}
+
+.form-overlay input[type="submit"]{
+    background-color: var(--btn-color);
+    color: var(--text-secondary);
+    border: 0;
+    outline: 0;
+}
+
+.form-overlay input[type="submit"]:hover{
+    background-color: var(--btn-hover-color);
+    cursor: pointer;
+}
+
+.form-overlay select{
+    color: #3a3a3a;
+}
+
+.footer{
+    width: 100%;
+    height: 75vh;
+}
+.footer-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+.about{
+    width: 40%;
+}
+.phone-container{
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+.phone-info{
+    display: flex;
+    flex-direction: column;
+}
+.phone-info span, .about h3, .footer-menu h3, .footer-drones h3, .footer-newsletter h3{
+    margin: 0px;
+    font-size: 22px;
+    font-family: var(--default-font-family);
+}
+.footer-menu-wrapper ul li{
+    list-style: none;
+    margin-bottom: 6px;
+}
+.footer-menu-wrapper ul li:hover{
+    color: var(--btn-color);
+    cursor: pointer;
+}
+.footer-newsletter{
+    width: fit-content;
+}
+.footer-newsletter .section-text{
+    margin-top: 14px;
+    display: block;
+}
+.input-email-wrapper{
+    margin-top: 16px;
+    position: relative;
+    display: block;
+    width: 100%;
+    border-bottom: #9c9c9c 1px solid;
+}
+.input-email-wrapper input[type="email"]{
+    width: 68%;
+    box-sizing: border-box;
+    background-color: 0;
+    border: 0;
+    outline: 0;
+}
+.input-email-wrapper input[type="submit"]{
+    width: 30%;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+.input-email-wrapper input[type="submit"]:hover{
+    cursor: pointer;
+    color: var(--btn-color);
+    font-weight: 600;
+}
+.bi-headset{
+    font-size: 60px;
+    color: var(--text-ternary);
+}
+.bi-headset::before{
+    transform: translate(-7px, 3px);
+}
+.section-adress{
+    margin: 0 0 16px 0;
+}
+.social-media i{
+    font-size: 32px
+}
 ::-webkit-scrollbar{
     width:5px
 }
@@ -354,4 +496,37 @@ section{
     --text: 18px;
     --btn-color: green;
     --btn-hover-color: black;
+}
+
+@media screen and (max-width: 800px){
+    :root{
+        --titles: 40px;
+    }
+    .sandwitch-menu{
+        display: block;
+    }
+    .nav-header-menu{
+        display: flex;
+        align-items: center;
+    }
+    .header-menu{
+        display: none;
+    }
+    .background-video-overlay, .background-video-overlay.centered{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .background-video-overlay .page-subtitle, .background-video-overlay.centered .page-title, .background-video-overlay.centered .page-subtitle{
+        width: 100%;
+        text-align: left;
+    }
+    .content-wrapper, .video-wrapper{
+        flex-direction: column;
+    }
+    .floating-video-content{
+        width: 100%;
+    }
+    .floating-video{
+        width: 100%;
+    }
 }
