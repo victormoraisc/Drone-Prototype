@@ -80,8 +80,7 @@ body{
     transform: rotate(-45deg) translate(-8px, -0px);
 }
 .logo img{
-    margin-top: -10%;
-    height: 130%;
+    height: 100%;
 }
 .floating-menu{
     background-color: var(--text-secondary);
