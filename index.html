@@ -17,10 +17,10 @@
             </div><!--End Logo Div-->
             <div class="nav-header-menu">
                 <ul class="header-menu">
-                    <li>Início</li>
-                    <li>Drones de Pulverização</li>
-                    <li>Drones de Mapeamento</li>
-                    <li>Contato</li>
+                    <li onClick="document.querySelector('.section-1').scrollIntoView()">Início</li>
+                    <li onClick="document.querySelector('.section-6').scrollIntoView()">Drones de Pulverização</li>
+                    <li onClick="document.querySelector('.section-8').scrollIntoView()">Drones de Mapeamento</li>
+                    <li onClick="document.querySelector('.section-11').scrollIntoView()">Contato</li>
                 </ul>
                 <div class="sandwitch-menu">
                     <div class="lines" id="line1"></div>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="section-3">
                 <div class="background-video">
                     <div class="background-video-overlay centered">
                         <h2 class="page-title">
@@ -88,7 +88,7 @@
                     <video src="assets/video-3.mp4" muted autoplay loop></video>
                 </div><!--End Background Video 1 Div-->
             </section>
-            <section class="section-2">
+            <section class="section-4 cards-section">
                 <div class="content-wrapper cards">
                     <h2 class="section-title cards">
                         A agricultura digital chegou!
@@ -124,13 +124,13 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="section-5">
                 <div class="background-video">
                     <video src="assets/video-4.mp4" muted autoplay loop></video>
                 </div><!--End Background Video 1 Div-->
             </section>
             
-            <section class="section-longer">
+            <section class="section-6 section-longer">
                 <div class="background-pattern"></div>
                 <div class="content-wrapper column">
                     <div class="video-wrapper">
@@ -182,22 +182,22 @@
                     </div>
             </section>
 
-            <section>
+            <section class="section-7">
                 <div class="background-video">
                     <video src="assets/video-6.mp4" muted autoplay loop></video>
                 </div><!--End Background Video 1 Div-->
             </section>
 
-            <section>
+            <section class="section-8 special-product-section">
                 <div class="background-pattern"></div>
                 <div class="content-wrapper">
                     <div class="floating-video left">
                         <video src="assets/video-7.mp4" muted loop autoplay></video>
                     </div>
                     <div class="floating-video-content">
-                        <h2 class="section-subtititle-detail">PULVERIZAÇÃO</h2>
+                        <h2 class="section-subtititle-detail">MAPEAMENTO</h2>
                         <h2 class="section-title"> 
-                            Agricultura inteligente para melhores resultados.
+                            Agricultura inteligente para melhores resultados
                         </h2>
                         <p class="section-text">
                             Com uma variedade de esquemas de controle e tecnologias complementares, fornece resultados de pesquisa com maior eficiência do que nunca.
@@ -214,7 +214,7 @@
                 </div>
             </section>
 
-            <section>
+            <section class="section-9">
                 <div class="content-wrapper special-products-container">
                     <div class="special-products">
                         <div class="special-product">
@@ -233,7 +233,7 @@
                 </div>
             </section> 
 
-            <section>
+            <section class="section-10 support">
                 <div class="content-wrapper">
                     <div class="floating-video-content">
                         <h2 class="section-subtititle-detail">SUPORTE</h2>
@@ -259,7 +259,7 @@
                 </div>
             </section>
 
-            <section>
+            <section class="section-11">
                 <div class="background-video">
                     <div class="background-video">
                         <div class="background-video-overlay form">
@@ -271,19 +271,24 @@
                                     Envie sua mensagem ou pergunta. Responderemos o mais breve possível.
                                 </h2>
                             </div>
-                            
-                            <div class="form-overlay">
-                                <input type="name" placeholder="Nome"></input>
-                                <input type="email" placeholder="E-mail"></input>
-                                <select id="assunto" name="Assunto">
+                            <form class="form-overlay" action="https://api.staticforms.xyz/submit" method="post">
+                                <input type="text" name="name" placeholder="Nome"></input>
+                                <input type="text" name="email" placeholder="E-mail"></input>
+                                <input class="input-phone" type="text" name="phone" placeholder="(00) 0000-0000"></input>
+                                <select id="subject" name="subject">
                                     <option value="assunto">-- Assunto --</option>
                                     <option value="Assistência Técnica">Assistência Técnica</option>
                                     <option value="Venda">Venda</option>
                                     <option value="Atendimento">Atendimento</option>
                                 </select>
-                                <textarea type="text" placeholder="Mensagem"></textarea>
+                                <textarea type="text" name="message" placeholder="Mensagem"></textarea>
+                                    <input type="text" name="honeypot" style="display:none">
+                                <input type="hidden" name="accessKey" value="87cfa93a-7aa7-4239-86ed-c7f718089c33">
+                                <input type="hidden" name="subject" value="Contact us from - example.com" />
+                                <input type="hidden" name="replyTo" value="@">
+                                <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
                                 <input type="submit" value="Enviar"></input>
-                            </div>
+                            </form>
                         </div><!--End Background Video 1 Overlay Div-->
                         
                     <img src="./assets/form-bkg.jpg" alt="">
@@ -344,10 +349,15 @@
                             <h3>Newsletter</h3>
                             <span class="section-text">Receba nossas últimas notícias e atualizações
                             </span>
-                            <span class="input-email-wrapper">
-                                <input type="email" placeholder="E-mail"></input>
-                                <input type="submit" value="Inscreva-se"></div>
-                            </span>          
+                            <form class="input-email-wrapper" action="https://api.staticforms.xyz/submit" method="post">
+                                <input type="email" name="email" placeholder="E-mail"></input>
+                                <input type="hidden" name="subject" value="Quero me Inscrever na Newsletter">
+                                <input type="text" name="honeypot" style="display:none">
+                                <input type="hidden" name="accessKey" value="87cfa93a-7aa7-4239-86ed-c7f718089c33">
+                                <input type="hidden" name="replyTo" value="@">
+                                <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+                                <input type="submit" value="Enviar"></input>
+                            </form>          
                         </div>
                     </div>
                     <div class="footer-lower">

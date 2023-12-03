@@ -27,6 +27,11 @@ header{
 .header.toggled .header-nav .header-menu li{
     color: var(--text-default);
 }
+.header-menu li:hover{
+    cursor: pointer;
+    color: var(--btn-color) !important;
+    font-weight: 600;
+}
 .header-menu{
     height: 100%;
     display: flex;
@@ -58,14 +63,12 @@ header{
     height: 130%;
 }
 section{
-    height: 90vh;
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 .content-wrapper{
     gap: var(--default-padding);
-    position: absolute;
     display: flex;
     align-items: center;
     top: 0;
@@ -77,15 +80,10 @@ section{
 .content-wrapper.column{
     flex-direction: column;
 }
-.section-2{
-    height: 100vh;
-}
-.section-longer{
-    height: 200vh;
-}
+
 .background-video {
-    height: 90vh;
     width: 100%;
+    height: 90vh;
     overflow: hidden;
     position: relative;
 }
@@ -94,13 +92,14 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
     object-position: center;
     z-index: -999; /* Mantenha o z-index negativo para posicionar o vídeo atrás do conteúdo */
 }
 
 .background-video-overlay {
-    position: absolute;
-    bottom: 0;
+    margin-top: 18vh;
     width: 70%;
     padding: var(--default-padding);
     z-index: 1; /* Aumente o z-index para que o overlay fique acima do vídeo */
@@ -154,6 +153,9 @@ section{
 }
 
 .background-pattern{
+    position: absolute;
+    z-index: -999;
+    top: 0;
     width: 100%;
     height: 100vh;
     opacity: 0.15;
@@ -174,6 +176,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 0 10vh 0;
 }
 .background-video-overlay.centered .page-title{
     width: 60%;
@@ -272,7 +275,7 @@ section{
     width: 100%;
     height: 40%;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 .products{
@@ -308,6 +311,9 @@ section{
 .special-product img{
     height: 30vh;
     width: auto;
+}
+.section-8 .floating-video-content{
+    margin-top: 18vh !important;
 }
 .background-video-overlay.form{
     padding: 0 var(--default-padding) 0 var(--default-padding);
@@ -528,5 +534,79 @@ section{
     }
     .floating-video{
         width: 100%;
+    }
+
+    .cards-wrapper{
+        gap: 5%;
+        justify-content: flex-start;
+    }
+    .cards-wrapper .card{
+        width: 30%;
+    }
+    section.section-longer > div.content-wrapper.column > div.video-wrapper{
+       margin-top: 0;
+    }
+    .product-wrapper{
+        flex-wrap: wrap;
+    }
+    .product-wrapper .products{
+        width: 40%;
+    }
+    .products{
+        height: 512px;
+    }
+    .special-products{
+        flex-direction: column;
+        width: 100%;
+    }
+    .special-product{
+        width: 100%;
+    }
+    .footer-wrapper{
+        flex-direction: column;
+    }
+    div.social-media{
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-around;
+      
+    }
+    .footer-wrapper div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-wrapper div ul{width: 280px;}
+}
+@media screen and (max-width: 480px){
+    .background-video-overlay.form{
+        flex-direction: column;
+    }
+    .background-video-overlay.form{
+        margin-top: var(--default-padding);
+    }
+    .form-title-and-subtitle{
+        width: 100%;
+    }
+    .form-overlay{
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 16px;
+    }
+    .cards-wrapper{
+        gap: 5%;
+        justify-content: flex-start;
+    }
+    .cards-wrapper .card{
+        width: 45%;
+    }
+    .content-wrapper.column{
+        height: auto;
+    }
+    .products{
+        height: 400px;
     }
 }

@@ -25,3 +25,31 @@ function headerScroll(){
   window.addEventListener('scroll', headerScroll);
 
   headerScroll();
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const phoneInput = document.querySelector('.input-phone');
+
+    phoneInput.addEventListener('input', function (event) {
+        let phoneNumber = event.target.value.replace(/\D/g, '');
+
+        if (phoneNumber.length > 11) {
+            phoneNumber = phoneNumber.slice(0, 11);
+        }
+
+        if (phoneNumber.length > 2) {
+            phoneNumber = `(${phoneNumber.substring(0, 2)}) ${phoneNumber.substring(2)}`;
+        }
+
+        if (phoneNumber.length > 10) {
+            phoneNumber = `${phoneNumber.substring(0, 10)}-${phoneNumber.substring(10)}`;
+        }
+
+        event.target.value = phoneNumber;
+    });
+
+    phoneInput.addEventListener('keydown', function (event) {
+        if (event.key.match(/\D/) && event.key !== 'Backspace') {
+            event.preventDefault();
+        }
+    });
+});
