@@ -409,6 +409,7 @@ section{
     padding: 0 8px;
     outline: 0;
     font-family: var(--default-font-family);
+    font-size: 16px;
 }
 
 .form-overlay textarea{
@@ -417,6 +418,7 @@ section{
     outline: 0;
     font-family: var(--default-font-family);
     resize: none; 
+    font-size: 16px;
 }
 
 .form-overlay input[type="submit"]{
