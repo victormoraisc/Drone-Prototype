@@ -1,4 +1,4 @@
-const headerNav = document.querySelector('.header');
+const headerNav = document.querySelector('.header-nav');
 const sandwitch = document.querySelectorAll('.lines');
 const logoLight = document.querySelector('.logo-light');
 const logoDark = document.querySelector('.logo-dark');
