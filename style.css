@@ -23,7 +23,7 @@ body{
 .header-nav.toggled{
     background-color: var(--header-bg-color);
 }
-.header.toggled .header-nav .header-menu li{
+.header-nav.toggled .header-menu li{
     color: var(--text-default);
 }
 .header-menu li:hover{
