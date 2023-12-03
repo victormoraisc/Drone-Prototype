@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drones</title>
+    <title>GR Drones - Agrícola</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header class="header">
         <div class="header-nav">
-            <div class="logo">
+            <div class="logo" onClick="document.querySelector('.section-1').scrollIntoView()">
                 <img class="logo-light" style="display: block;" src="assets/logo.png" alt="Logo do Site">
                 <img class="logo-dark"  style="display: none;" src="assets/logo-dark.png" alt="logo escura do site">
             </div><!--End Logo Div-->
@@ -22,7 +23,7 @@
                     <li onClick="document.querySelector('.section-8').scrollIntoView()">Drones de Mapeamento</li>
                     <li onClick="document.querySelector('.section-11').scrollIntoView()">Contato</li>
                 </ul>
-                <div class="sandwitch-menu">
+                <div class="burger-menu">
                     <div class="lines" id="line1"></div>
                     <div class="lines" id="line2"></div>
                     <div class="lines" id="line3"></div>
@@ -31,6 +32,12 @@
             
         </div><!--End Nav Header Div-->
     </header>
+        <ul class="floating-menu">
+            <li onClick="document.querySelector('.section-1').scrollIntoView(); document.querySelector('.burger-menu').click()">Início</li>
+            <li onClick="document.querySelector('.section-6').scrollIntoView(); document.querySelector('.burger-menu').click()">Drones de Pulverização</li>
+            <li onClick="document.querySelector('.section-8').scrollIntoView(); document.querySelector('.burger-menu').click()">Drones de Mapeamento</li>
+            <li onClick="document.querySelector('.section-11').scrollIntoView(); document.querySelector('.burger-menu').click()">Contato</li>
+        </ul>
     <main>
         <article>
             <section class="section-1">
@@ -42,7 +49,7 @@
                         <h3 class="page-subtitle">
                             A GR Drones se torna um centro de soluções ainda mais completo para o agronegócio. A tecnologia de ponta dos drones permite fluxos de trabalho inovadores, tornando a agricultura mais eficiente do que nunca.
                         </h2>
-                        <div class="video-button">
+                        <div class="video-button" onClick="document.querySelector('.section-6').scrollIntoView()">
                             Saiba Mais
                         </div>
                     </div><!--End Background Video 1 Overlay Div-->
@@ -66,7 +73,7 @@
                             A solução fornece gerenciamento de campo preciso, inteligente, informatizado e digitalizado para vários tipos de culturas.
                             Ganhe eficiência na inspeção de culturas e no mapeamento de áreas.
                         </p>
-                        <div class="video-button">
+                        <div class="video-button" onClick="document.querySelector('.section-8').scrollIntoView()">
                             Saiba Mais
                         </div>
                     </div>
@@ -81,7 +88,7 @@
                         <h3 class="page-subtitle">
                             Os drones são usados no agronegócio por aumentar a produtividade e até mesmo reduzir os custos de produção nas lavouras.
                         </h3>
-                        <div class="video-button">
+                        <div class="video-button" onClick="document.querySelector('.section-6').scrollIntoView()">
                             Saiba Mais
                         </div>
                     </div><!--End Background Video 1 Overlay Div-->
@@ -119,7 +126,7 @@
                             <p class="card-text">Contagem de plantas</p>
                         </div>
                     </div>  
-                    <div class="video-button">
+                    <div class="video-button" onClick="document.querySelector('.section-6').scrollIntoView()">
                         Escolha Um Modelo
                     </div>
                 </div>

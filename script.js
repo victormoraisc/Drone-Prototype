@@ -1,9 +1,11 @@
+const headerNav = document.querySelector('.header');
+const sandwitch = document.querySelectorAll('.lines');
+const logoLight = document.querySelector('.logo-light');
+const logoDark = document.querySelector('.logo-dark');
+const menuButton = document.querySelector('.burger-menu');
+const floatingMenu = document.querySelector('.floating-menu');
 
 function headerScroll(){
-    var headerNav = document.querySelector('.header');
-    var sandwitch = document.querySelectorAll('.lines');
-    var logoLight = document.querySelector('.logo-light');
-    var logoDark = document.querySelector('.logo-dark');
     if (window.scrollY > 0) {
       headerNav.classList.add('toggled');
       logoDark.style.display = 'block';
@@ -53,3 +55,26 @@ function headerScroll(){
         }
     });
 });
+
+menuButton.addEventListener('click', function() {
+    floatingMenu.classList.toggle('active');
+    if(floatingMenu.classList.contains('active')) {
+      menuButton.classList.add('active');
+      headerNav.classList.add('toggled');
+      logoDark.style.display = 'block';
+      logoLight.style.display = 'none';
+      sandwitch.forEach(sandwitch => {
+        sandwitch.classList.add('toggled');
+      })
+    }else if (!floatingMenu.classList.contains('active') && window.scrollY == 0) {
+      menuButton.classList.remove('active');
+      headerNav.classList.remove('toggled');
+      logoDark.style.display = 'none';
+      logoLight.style.display = 'block';
+      sandwitch.forEach(sandwitch => {
+        sandwitch.classList.remove('toggled');
+      })
+    }else {
+      menuButton.classList.remove('active');
+    }
+  })

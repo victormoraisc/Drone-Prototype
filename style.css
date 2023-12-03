@@ -32,35 +32,81 @@ header{
     color: var(--btn-color) !important;
     font-weight: 600;
 }
+.logo:hover{
+    cursor:pointer;
+    transform: scale(1.05);
+}
 .header-menu{
     height: 100%;
     display: flex;
     align-items: center;
     gap: 18px;
 }
-.header-menu li{
+.header-menu li, .floating-menu li{
     list-style: none;
     color: var(--text-secondary);
     font-family: var(--default-font-family);
 }
-.sandwitch-menu{
+.burger-menu{
     width: 48px;
     height: 48px;
     display: none;
+
 }
-.sandwitch-menu div{
+.burger-menu div{
     width: 48px;
     height: 5px;
-    margin-top: 9px;
     border-radius: 8px;
     background-color:var(--text-secondary);
+    transition: all ease-in-out 0.3s;
 }
-.sandwitch-menu .lines.toggled{
+.burger-menu #line2{
+    transform: translateY(8px);
+}
+.burger-menu #line3{
+    transform: translateY(16px);
+}
+.burger-menu .lines.toggled{
     background-color: var(--text-default);
+}
+.burger-menu.active #line1{
+    transform: rotate(45deg) translate(7px, 15px);
+}
+.burger-menu.active #line2{
+    opacity: 0;
+}
+.burger-menu.active #line3{
+    transform: rotate(-45deg) translate(-8px, -0px);
 }
 .logo img{
     margin-top: -10%;
     height: 130%;
+}
+.floating-menu{
+    background-color: var(--text-secondary);
+    position: fixed;
+    display: none;
+    z-index: 999;
+    width: fit-content;
+    right: 0;
+    margin-top: 17.5vh;
+    padding: 0 var(--default-padding) 0 16px;
+}
+.floating-menu.active{
+    display: block;
+}
+.floating-menu li{
+    list-style: none;
+    color: var(--text-default);
+    font-family: var(--default-font-family);
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 18px;
+}
+.floating-menu li:hover{
+    cursor: pointer;
+    color: var(--btn-color) !important;
+    font-weight: 600;
 }
 section{
     width: 100%;
@@ -508,7 +554,7 @@ section{
     :root{
         --titles: 40px;
     }
-    .sandwitch-menu{
+    .burger-menu{
         display: block;
     }
     .nav-header-menu{
