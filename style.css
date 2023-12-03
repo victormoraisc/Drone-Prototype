@@ -21,6 +21,7 @@ body{
     z-index: 999;
     padding: 0 var(--default-padding);
     margin-top: constant(safe-area-inset-top), env(safe-area-inset-top);
+    align-items: center;
 }
 .header-nav.toggled{
     background-color: var(--header-bg-color);
@@ -78,6 +79,9 @@ body{
 }
 .burger-menu.active #line3{
     transform: rotate(-45deg) translate(-8px, -0px);
+}
+.logo{
+    height: 100%;
 }
 .logo img{
     height: 100%;
