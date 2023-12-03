@@ -20,6 +20,7 @@ body{
     box-sizing: border-box;
     z-index: 999;
     padding: 0 var(--default-padding);
+    margin-top: constant(safe-area-inset-top), env(safe-area-inset-top);
 }
 .header-nav.toggled{
     background-color: var(--header-bg-color);
