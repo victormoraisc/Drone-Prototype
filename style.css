@@ -264,6 +264,10 @@ section{
     color: var(--text-quaternary);
     font-weight: 400;
 }
+.section-text a{
+    text-decoration: none;
+    color: var(--text-quaternary);
+}
 .section-list{
     margin-top: 16px;
 }
@@ -515,6 +519,9 @@ section{
 }
 .social-media i{
     font-size: 32px
+}
+.social-media a{
+    color: var(--text-ternary);
 }
 ::-webkit-scrollbar{
     width:5px
